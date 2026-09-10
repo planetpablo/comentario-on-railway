@@ -17,3 +17,4 @@ ARG SMTP_PASSWORD
 ARG SMTP_FROM
 
 RUN envsubst < secrets.template.yaml > secrets.yaml
+RUN find / -name "comentario" -type f 2>/dev/null || echo "binary not found at root"

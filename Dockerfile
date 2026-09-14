@@ -18,4 +18,5 @@ ARG SMTP_FROM
 
 RUN envsubst < secrets.template.yaml > secrets.yaml
 RUN cat secrets.yaml
+RUN pwd && ls -la
 CMD ["/comentario/comentario"]

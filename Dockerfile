@@ -19,4 +19,5 @@ ARG SMTP_FROM
 RUN envsubst < secrets.template.yaml > secrets.yaml
 RUN cat secrets.yaml
 RUN pwd && ls -la
+RUN ls -la /comentario/secrets.yaml && echo "File exists and is ready"
 CMD ["/comentario/comentario"]
